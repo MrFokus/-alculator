@@ -1,0 +1,128 @@
+
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+body{
+    background-color: black;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.calc{
+	border-radius: 10px;
+	background-color:rgba(131, 131, 131, 0.562) ;
+	width: auto;
+	height: auto;	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 5px solid rgb(107, 107, 107);
+
+}
+.div_number{
+    display: grid;
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: repeat(5,100px);
+	width: auto;
+	height: auto;
+}
+button{
+	background-color: rgb(250, 235, 215);
+	border-radius: 5px;
+	font-size: 25px;
+	margin: 5px;
+	font-family: DejaVu Sans Mono, monospace;
+	font-weight: 700;
+}
+button:active{
+	background-color: rgb(255, 212, 160);
+}
+.display{
+	width: 400px;
+	min-height: 100px ;
+	height: auto;
+	margin-bottom: 3px;
+	border-radius: 10px;
+	background-color: rgb(202, 202, 202);
+	position: relative;
+}
+.primary_number{
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 50px;
+	font-family: DejaVu Sans Mono, monospace;
+	max-width: 400px;
+	height: auto;
+}
+.secondary_number{
+	float: right;
+	position: relative;
+	right: 0;
+	font-size: 30px;
+	font-family: DejaVu Sans Mono, monospace;
+	max-width: inherit;
+	height: auto;
+}
+.operand{
+	float: right;
+	position: relative;
+	right: 0;
+	font-size: 30px;
+	font-family: DejaVu Sans Mono, monospace;
+
+}
+.window_function{
+	display: grid;
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: repeat(4,100px);
+	width: auto;
+	height: auto;
+}
+
+#invisible{
+	display: none;
+}
+.window_function>.switching{
+	grid-column: span 4;
+}
